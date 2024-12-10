@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Add Company Details</h1>
+{% block content %}
+<form action="/cmp" method="post">
+    {% csrf_token %}
+    <p>Company ID:</p>{{form.cid}}<br>
+    <p>Company Name:</p>{{form.cname}}
+    <p>Company Email:</p>{{form.cemail}}<br>
+    <p>logo:</p>{{form.clogo}}<br>
+    <p>Company Website:</p>{{form.cname1}}<br>
+    <button type="submit">Submit</button>
+</form>
+{% endblock content %}
+</body>
+</html>

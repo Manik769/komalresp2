@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .a{background-color: crimson; width:auto;height:50px; border-radius: 5px;}
+    .a1{position: relative;left: 650px; top:-15px;display: inline-block;}
+    .a3{position: relative;top:10px}
+    .a2{position: relative;top:40px}
+    .a4{position: relative;left:60px}
+    .a5{position: relative;left:90px}
+    .a6{position: relative;left: 150px}
+    .a7{position: relative;left: 210px}
+    .a8{position: relative;left:30px}
+    .a9{position: relative;left:90px}
+    .a10{position: relative;left: 120px}
+    .a12{position: relative;left: 250px}
+    .a13{position: relative;left:250px}
+    .a14{position: relative;left: 280px}
+</style>
+<body>
+<div class="a">
+<h1 class="a1">List of Employees</h1>
+    </div>
+{% block content %}
+<table>
+    <thead class="a3">
+
+        <tr>
+            <th>Company ID</th>
+            <th class="a4" >Company Name</th>
+            <th  class="a5" >Company Email</th>
+            <th class="a6">logo</th>
+            <th class="a7">Company Website</th>
+        </tr>
+
+</thead>
+    <tbody>
+    {% for user in userData %}
+      <tr class="a2">
+          <td class="a8">{{user.cid}}</td>
+          <td class="a9">{{user.cname}}</td>
+          <td class="a10">{{user.cemail}}</td>
+          <td class="a11">{{user.clogo}}</td>
+          <td class="a12">{{user.cname1}}</td>
+          <td>
+              <a class="a13" href="/edit/{{user.id}}">Edit</a>
+              <<a class="a14" href="/delete/{{user.id}}">Delete</a>
+          </td>
+
+      </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+{% endblock content %}
+</body>
+</html>

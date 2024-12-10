@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/update/{{userData.id}}" method="post">
+    {% csrf_token %}
+    Company ID:<input type="text" name="cid" value="{{userData.cid}}"><br>
+    Company Name:<input type="text" name="cname" value="{{userData.cname}}"><br>
+    Company Email:<input type="text" name="cemail" value="{{userData.cemail}}"><br>
+    logo:<input type="text" name="clogo" value="{{userData.clogo}}"><br>
+    Company Website:<input type="text" name="cname1" value="{{userData.cname1}}"><br>
+    <button type="submit">Update</button>
+</form>
+</body>
+</html>

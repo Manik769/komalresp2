@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .a{background-color: rgb(255, 255, 255);width:600px;height:300px;outline-style: solid;position: relative;left:400px;top: 100px;
+    border-radius: 25px;}
+    .a1{position: relative;top:100px;left:180px;width:250px;border-radius: 15px;height:25px}
+    .a2{position: relative;top:120px;left:180px;width:250px;height:25px; border-radius: 15px;}
+    .a3{background-color: #00eaff;width:600px;height:100px;animation-name: po;
+    animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
+  animation-duration:0.5s;
+  animation-direction: alternate-reverse;}
+    @keyframes po {from{background-color:purple}to{background-color: yellow}}
+    .a4{position: relative;top:170px;left:-80px;width:250px;border-radius:15px;height:25px;
+    background-color: yellow}
+    .a5{position: relative; left:180px;top:30px}
+</style>
+<body>
+{% load static %}
+<div class="a">
+    <div class="a3">
+        <h1 class="a5">Admin Login</h1>
+<form action="login" method="post">
+    {% csrf_token %}
+    <input class="a1"   type="text" name="username" placeholder="enter your username"><br>
+    <input  class="a2"    type="text" name="password"  placeholder="enter your password">
+    <button class="a4"  type="submit">login</button>
+</form>
+        </div>
+</div>
+</body>
+</html>
